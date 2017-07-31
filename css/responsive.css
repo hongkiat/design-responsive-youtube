@@ -1,0 +1,87 @@
+/* first responsive changes between mobile and desktop layout */
+@media only screen and (min-width: 600px) {
+  #sidenav { z-index: 999; width: 250px; }
+  #page { z-index: 1; padding-left: 250px; }
+  
+  #topbar { display: none; visibility: hidden; }
+  
+  #fulltop { display: block; visibility: visible; height: 45px; padding: 8px 14px; border-bottom: 1px solid #d8d8d8; }
+  #logomini { display: block; float: left; margin-right: 40px; }
+  
+  #searchform { display: block; float: left; }
+  #s { 
+    width: 310px; 
+    border: 1px solid #ccc;
+    padding: 8px 7px;
+    color: #999;
+    background: #f7f7f7;
+    font-size: 1.45em;
+    text-shadow: 0px 1px 0px #fff;
+    outline: none;
+    -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5) inset;
+    -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5) inset;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.5) inset;
+    -webkit-transition: all .4s linear;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    -moz-transition: all .4s linear;
+    transition: all .4s linear;
+  }
+  #s:focus { color: #666; background: #fff; border-color: #b8b8b8; }
+  
+  #sbtn { cursor: pointer; width: 24px; height: 24px; border: 0; background: none; background-image: url('../images/search.png'); position: relative; top: -4px; left: -35px; opacity: 0.7; }
+  #sbtn:hover { cursor: pointer; }
+  
+  #topsidelinks { display: inline-block; margin-left: -15px; }
+  #topsidelinks li { display: inline; margin-right: 2px; border-right: 1px solid #c1c1c1; }
+  #topsidelinks li a, #userlogin a { display: inline-block; color: #6790ce; text-shadow: 1px 1px 0 #fff; font-size: 1.2em; font-weight: bold; line-height: 40px; text-decoration: none; padding: 0px 6px; }
+  #topsidelinks li a:hover, #userlogin a:hover { text-decoration: underline; }
+  
+  #userlogin { display: none; }
+}
+
+
+/* as the layout widens display a secondary sidebar and top user links */
+@media only screen and (min-width: 810px) {
+  #userlogin { display: block; float: right; margin-right: 35px; margin-top: 4px; height: 30px; line-height: 30px; }
+  #userlogin .defaultphoto { display: block; float: left; border: 1px solid #ddd; margin-right: 3px; }
+  #userlogin a { line-height: 35px; }
+  
+  #secondary { display: block; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; visibility: visible; width: 240px; padding: 10px 14px; z-index: 999; position: absolute; right: 0; }
+  #secondary h2 { font-size: 1.3em; font-weight: bold; font-style: italic; line-height: 1.45em; color: #66666d; margin-bottom: 7px; }
+  .videoblock { display: block; visibility: visible; width: 100%; }
+  .videoblock a .vidimg { display: block; visibility: visible; }
+  
+  .videoblock a { display: block; width: 100%; margin-bottom: 7px; padding: 5px 0px; text-decoration: none; border-bottom: 1px solid #fff; }
+  .videoblock a:hover { border-bottom: 1px solid #ebebeb; background: #f6f6f6; }
+  
+  .videoblock a .vidimg img { display: inline-block; visibility: visible; border: 1px solid #cdcdcd; }
+
+.videoblock a h4 { font-weight: bold; font-size: 1.3em; color: #333; margin-bottom: 1px; }
+.videoblock a:hover h4 { color: #5a7aaa; }
+
+.videoblock a .uploader { display: block; font-size: 1.1em; color: #666669; }
+.videoblock a .views { display: block; font-size: 1.1em; color: #666669; }
+.videoblock a:hover .uploader, .videoblock a:hover .views { color: #525252; }
+  
+  #page { padding-right: 240px; }
+}
+
+/* retina display devices only */
+@media only screen and (-webkit-min-device-pixel-ratio: 2),	only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+ 
+ #slidelink { background: url('../images/menu@2x.png') top left no-repeat; background-size: 50px 35px; }
+ 
+ #sbtn { background: url('../images/search@2x.png'); background-size: 24px 24px; }
+ 
+ #sidenav li a.signin i { background-image: url('../images/user@2x.png'); background-size: 24px 21px; } 
+ #sidenav li a.register i { background-image: url('../images/gear@2x.png'); background-size: 26px 26px; }
+ #sidenav li a.popular i { background-image: url('../images/star@2x.png'); background-size: 26px 26px; }
+ #sidenav li a.recent i { background-image: url('../images/coffee@2x.png'); background-size: 24px 26px; }
+ #sidenav li a.comedy i { background-image: url('../images/mic@2x.png'); background-size: 12px 24px; }
+ #sidenav li a.entertainment i { background-image: url('../images/tv@2x.png'); background-size: 24px 24px; }
+ #sidenav li a.film i { background-image: url('../images/film@2x.png'); background-size: 20px 25px; }
+ #sidenav li a.gaming i { background-image: url('../images/joystick@2x.png'); background-size: 22px 20px; }
+ #sidenav li a.people i { background-image: url('../images/pencil@2x.png'); background-size: 23px 23px; }
+}
